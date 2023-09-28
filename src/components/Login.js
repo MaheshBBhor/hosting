@@ -1,7 +1,7 @@
 // src/components/Login.js
 import React, { useState } from "react";
 
-function Login() {
+function Login({onLogin}) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -27,7 +27,8 @@ function Login() {
     );
 
     if (foundUser) {
-      alert("Login successful!");
+        onLogin()
+    //   alert("Login successful!");
     } else {
       alert("Login failed. Please check your credentials.");
     }
