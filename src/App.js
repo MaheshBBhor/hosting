@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import MessageToSonali from "./components/MessageToSonali";
+import Message from "./components/Message";
 import React, { useState } from "react";
 
 function App() {
@@ -17,10 +17,10 @@ function App() {
       {/* <Login />
       <Signup /> */}
       {loggedIn ? (
-        <MessageToSonali />
+        <Message />
       ) : (
         <Login onLogin={handleLogin} />
-      )}
+       )} 
       </header>
     </div>
   );
