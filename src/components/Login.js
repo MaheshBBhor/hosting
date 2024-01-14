@@ -1,7 +1,10 @@
 // src/components/Login.js
 import React, { useState } from "react";
+import singlebuffalo from '../components/imagesDa/singlebuffalo.jpg';
+
 
 function Login({onLogin}) {
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -35,11 +38,23 @@ function Login({onLogin}) {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+    
+    <div style={{
+      backgroundImage: `url(${singlebuffalo})`,
+      // backgroundPosition: 'center',
+      backgroundSize: '100% 100%',
+      // display: 'flex',
+      flexDirection: 'row',
+      // alignItems: 'center',
+      width:"100%",
+      height:"1200px",
+      // color: 'Crimson'
+    }}>
+   
+      <h2 style={{ color: 'Crimson'}}>Login</h2>
+      <form onSubmit={handleSubmit} style={{ color: 'Crimson'}}>
         <div>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Username{" "}</label>
           <input
             type="text"
             id="username"
@@ -49,7 +64,7 @@ function Login({onLogin}) {
           />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password{" "}</label>
           <input
             type="password"
             id="password"
@@ -58,8 +73,9 @@ function Login({onLogin}) {
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" style={{ color: 'Crimson'}}>Login</button>
       </form>
+      {/* </containerStyle> */}
     </div>
   );
 }
