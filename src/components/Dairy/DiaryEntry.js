@@ -1,13 +1,21 @@
 // src/components/DiaryEntry.js
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
 
+const info = styled.h3`
+  margin-top: 500px;
+  padding: 50px;
+  color: black;
+  display: flex;
+  color: white;
+`;
 function DiaryEntry({ date, productName, quantity, fat }) {
   return (
     <div className="diary-entry">
-      <p>Date: {date}</p>
-      <p>Product Name: {productName}</p>
-      <p>Quantity: {quantity}</p>
-      <p>Fat: {fat}</p>
+      <info>Date: {date}</info>
+      <info>Product Name: {productName}</info>
+      <info>Quantity: {quantity}</info>
+      <info>Fat: {fat}</info>
     </div>
   );
 }

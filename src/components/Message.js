@@ -33,15 +33,15 @@ console.log("use",users);
   },[]);
   return (
     <div style={{
-      backgroundImage: `url(${buffaloBoy})`,
-      backgroundPosition: 'center',
-      backgroundSize: '100% 100%',
+      // backgroundImage: `url(${buffaloBoy})`,
+      // backgroundPosition: 'center',
+      // backgroundSize: '100% 100%',
       // display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
-      width:"100%",
-      height:"1200px",
-      color: 'Black',
+      // width:"100%",
+      // height:"1200px",
+      color: 'white',
       justifyContent: 'center',
     }}>
       <h2>Hi {users.username}</h2>
