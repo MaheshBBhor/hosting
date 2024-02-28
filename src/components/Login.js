@@ -1,10 +1,10 @@
 // src/components/Login.js
 import React, { useState } from "react";
+import "./Login.css"; // Make sure to import the CSS file
 import singlebuffalo from '../components/imagesDa/singlebuffalo.jpg';
 
 
-function Login({onLogin}) {
-
+function Login({ onLogin }) {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -30,52 +30,58 @@ function Login({onLogin}) {
     );
 
     if (foundUser) {
-        onLogin()
-    //   alert("Login successful!");
+      onLogin();
+      //   alert("Login successful!");
     } else {
       alert("Login failed. Please check your credentials.");
     }
   };
 
   return (
-    
-    <div style={{
-      backgroundImage: `url(${singlebuffalo})`,
-      // backgroundPosition: 'center',
-      backgroundSize: '100% 100%',
-      // display: 'flex',
-      flexDirection: 'row',
-      // alignItems: 'center',
-      width:"100%",
-      height:"1200px",
-      // color: 'Crimson'
-    }}>
-   
-      <h2 style={{ color: 'Crimson'}}>Login</h2>
-      <form onSubmit={handleSubmit} style={{ color: 'Crimson'}}>
-        <div>
-          <label htmlFor="username">Username{" "}</label>
+    <div className="ring" 
+    // style={{
+    //   backgroundImage: `url(${singlebuffalo})`,
+    //   backgroundPosition: 'center',
+    //   backgroundSize: '100% 100%',
+    //   // display: 'flex',
+    //   // flexDirection: 'row',
+    //   alignItems: 'center',
+    //   width:"100%",
+    //   // height:"1200px",
+    //   // color: 'Crimson'
+    // }} 
+     >
+      <i style={{ "--clr": "#00ff0a" }}></i>
+      <i style={{ "--clr": "#ff0057" }}></i>
+      <i style={{ "--clr": "#fffd44" }}></i>
+      <div className="login">
+        <h2>Login</h2>
+        <div className="inputBx">
           <input
             type="text"
-            id="username"
+            placeholder="Username"
             name="username"
             value={formData.username}
             onChange={handleChange}
           />
         </div>
-        <div>
-          <label htmlFor="password">Password{" "}</label>
+        <div className="inputBx">
           <input
             type="password"
-            id="password"
+            placeholder="Password"
             name="password"
             value={formData.password}
             onChange={handleChange}
           />
         </div>
-        <button type="submit" style={{ color: 'Crimson'}}>Login</button>
-      </form>
-      {/* </containerStyle> */}
+        <div className="inputBx">
+          <input type="submit" value="Sign in" onClick={handleSubmit} />
+        </div>
+        {/* <div className="links">
+          <a href="#">Forget Password</a>
+          <a href="#">Signup</a>
+        </div> */}
+      </div>
     </div>
   );
 }
