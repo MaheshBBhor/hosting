@@ -55,7 +55,7 @@ function Login({ onLogin }) {
       <i style={{ "--clr": "#ff0057" }}></i>
       <i style={{ "--clr": "#fffd44" }}></i>
       <div className="login">
-        <h2>Login</h2>
+        <h2>Login To web</h2>
         <div className="inputBx">
           <input
             type="text"
